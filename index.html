@@ -1,0 +1,516 @@
+最新版本【2.1.4】
+更新内容【增加文转语功能和福利红包，修复垃圾查询，修改界面字体，并修复若干bug】
+更新网盘【https://kedu.lanzoui.com/b0d7ogi0j】
+更新直链【http://codu.yaqian.hk/codu2.1.4.apk】
+更新开关【开】
+
+
+赞助五元【https://afdian.net/order/create?product_type=1&plan_id=becfc7800bcb11ec8fb952540025c377&sku=%5B%7B%22sku_id%22%3A%22bed261de0bcb11ec891152540025c377%22,%22count%22%3A1%7D%5D】
+赞助十元【https://afdian.net/order/create?product_type=1&plan_id=3056cc480bde11ec988852540025c377&sku=%5B%7B%22sku_id%22%3A%2230596e580bde11ec81d152540025c377%22,%22count%22%3A1%7D%5D】
+赞助十五【https://afdian.net/order/create?product_type=1&plan_id=3a284d280bde11ecae6252540025c377&sku=%5B%7B%22sku_id%22%3A%223a2ad0520bde11ec87fd52540025c377%22,%22count%22%3A1%7D%5D】
+
+
+
+
+解析一【https://www.2692222.com/?url=】
+解析二【https://lecurl.cn/?url=】
+解析三【https://api.jhdyw.vip/?url=】
+解析四【http://www.ikukk.com/?url=】
+
+
+验证首次【关】
+验证三次【关】
+验证密码【8080】
+验证文字【截图或点击二维码保存，扫码关注公众号回复验证码获取】
+
+
+【免责代码】
+免责.text=tostring("一、版权声明\n\n1.刻度空间通过链接的方式提供相关内容。所有内容(以下简称“内容”)均为第三方内容提供方（以下简称“第三方”）提供。\n\n2.刻度空间自身不存储、控制编辑或修改被链接的第三方网页上的信息内容或其表现形式,所有数据均非人工检索、根据用户键入的关键字自动生成到第三方网页的链接获取内容,对提供链接的内容不拥有任何权利,不承担任何法律责任;\n\n3.刻度空间承诺遵守并尊重中国现行法律法规及其他规范性文件对著作权人的保护,并依照规定制定了保护权利人权利的处理流程。作为权利人,当用户发现在刻度空间的链接所指向的第三方网页的内容侵犯了用户的合法权益时,请联系我们的邮箱:837123340@qq.com我们将断开相关链接。\n\n二、免责条款\n\n1.刻度空间所有数据均非人工检索、根据用户键入的关键字自动链接到第三方网页获取内容,其他一切因使用刻度空间而可能遭致的意外、疏忽、侵权及其造成的损失（包括因下载被搜索链接到的第三方网站内容而感染木马病毒),刻度空间对其概不承担任何法律责任；\n\n2.任何通过使用刻度空间搜索链接到的第三方网页均他人制作或提供,用户可能从该第三方网页上获得资讯及享用服务,刻度空间对其合法性概不承担任何法律责任;\n\n3.刻度空间搜索结果根据用户键入的关键字搜索获得并生成,不代表刻度空间赞成被搜索链接到的第三方网页上的内容或立场;\n\n4.用户应该对使用搜索引擎的结果自行承担风险。刻度空间不做任何形式的保证：不保证搜索结果满足用户的要求,不保证搜索服务不中断,不保证搜索结果的安全性、正确性、及时性、合法性。因网络状况、通讯线路、第三方网站等任何原因而导致用户不能正常使用刻度空间,刻度空间不承担任何法律责任;\n\n5.刻度空间尊重并保护所有的个人隐私权,用户所提供个人资料,非经用户亲自许可或根据相关法律、法规的强制性规定,我们不会主动地泄露给第三方。(用户在使用搜索引擎时输入的关键字将不被认为是用户的个人隐私资料。)\n\n6.任何网站如果不想被刻度空间收录(即不被搜索到),应该及时向我们反映,否则,将依照惯例视其为可收录网站。\n\n7.刻度空间仅作为作为技术学习使用，请于下载后24小时之内删除或卸载，您继续使用刻度空间，即表明您已了解并同意上述声明以及条款。")
+【免责代码】
+
+
+
+
+【主页代码】
+
+主标题.text=tostring("CODU")
+子标题.text=tostring("等到你不意外却惊喜")
+
+--搜索事件开始
+--默认搜索
+s.onClick=function()
+  --网址判断
+  if sysr.text == "" then
+    提示("什么也没输入")
+   else
+    if sysr.text == "8080" then
+      进入子页面("liu",{""})
+     else
+      --关闭搜索栏，转换为浏览网页
+      if String(sysr.text).startsWith("http://") then
+        进入子页面("liu",{""..sysr.text})
+       else if String(sysr.text).startsWith("https://") then
+          进入子页面("liu",{""..sysr.text})
+         else if String(sysr.text).startsWith("www") then
+            进入子页面("liu",{"http://"..sysr.text})
+           else
+            进入子页面("liu",{"https://wap.sogou.com/web/sl?bid=sogou-mobb-f04c1064af05871d&keyword="..sysr.text})
+          end
+        end
+      end
+    end
+  end
+end
+
+s1wz.text=tostring("百度")
+s1.onClick=function()
+  --网址判断
+  if sysr.text == "" then
+    提示("什么也没输入")
+   else
+    --关闭搜索栏，转换为浏览网页
+    if String(sysr.text).startsWith("http://") then
+      进入子页面("liu",{""..sysr.text})
+     else if String(sysr.text).startsWith("https://") then
+        进入子页面("liu",{""..sysr.text})
+       else if String(sysr.text).startsWith("www") then
+          进入子页面("liu",{"http://"..sysr.text})
+         else
+          进入子页面("liu",{"https://m.baidu.com/s?from=1024325b&word="..sysr.text})
+        end
+      end
+    end
+  end
+end
+
+s2wz.text=tostring("翻译")
+s2.onClick=function()
+  --网址判断
+  if sysr.text == "" then
+    提示("什么也没输入")
+   else
+    --关闭搜索栏，转换为浏览网页
+    if String(sysr.text).startsWith("http://") then
+      进入子页面("liu",{""..sysr.text})
+     else if String(sysr.text).startsWith("https://") then
+        进入子页面("liu",{""..sysr.text})
+       else if String(sysr.text).startsWith("www") then
+          进入子页面("liu",{"http://"..sysr.text})
+         else
+          进入子页面("liu",{"https://translator.ai.xiaomi.com/?text="..sysr.text})
+        end
+      end
+    end
+  end
+end
+
+s3wz.text=tostring("搜影")
+s3.onClick=function()
+  --网址判断
+  if sysr.text == "" then
+    进入子页面("liu",{"https://ys.codu.top/"})
+   else
+    --关闭搜索栏，转换为浏览网页
+    if String(sysr.text).startsWith("http://") then
+      进入子页面("liu",{""..sysr.text})
+     else if String(sysr.text).startsWith("https://") then
+        进入子页面("liu",{""..sysr.text})
+       else if String(sysr.text).startsWith("www") then
+          进入子页面("liu",{"http://"..sysr.text})
+         else
+          进入子页面("liu",{"https://ys.codu.top/list/search/?keyword="..sysr.text})
+        end
+      end
+    end
+  end
+end
+
+s4wz.text=tostring("搜券")
+s4.onClick=function()
+  --网址判断
+  if sysr.text == "" then
+    进入子页面("liu",{"http://xtjpx.yhzu.cn"})
+   else
+    --关闭搜索栏，转换为浏览网页
+    if String(sysr.text).startsWith("http://") then
+      进入子页面("liu",{""..sysr.text})
+     else if String(sysr.text).startsWith("https://") then
+        进入子页面("liu",{""..sysr.text})
+       else if String(sysr.text).startsWith("www") then
+          进入子页面("liu",{"http://"..sysr.text})
+         else
+          进入子页面("liu",{"http://xtjpx.yhzu.cn/index.php?r=index/wap#/search/tbList?keyWords="..sysr.text})
+        end
+      end
+    end
+  end
+end
+--搜索事件结束
+
+
+
+d01wz.text=tostring("全平台优惠券")
+d02wz.text=tostring("街拍团")
+d03wz.text=tostring("投稿贴图")
+d04wz.text=tostring("精选APP")
+d05wz.text=tostring("小众导航")
+d06wz.text=tostring("头号影厅")
+d07wz.text=tostring("小姐姐短视频")
+d08wz.text=tostring("真不卡影视")
+d09wz.text=tostring("两个BT")
+d10wz.text=tostring("微博 热搜榜")
+d11wz.text=tostring("知乎 热榜")
+d12wz.text=tostring("微信 24H热文")
+d13wz.text=tostring("百度 实时热点")
+d14wz.text=tostring("B站热榜")
+d15wz.text=tostring("抖音视频榜")
+d16wz.text=tostring("豆瓣新片榜")
+d17wz.text=tostring("猫眼票房榜")
+d18wz.text=tostring("更多热榜")
+
+d01.onClick=function()
+进入子页面("liu",{"http://xtjpx.yhzu.cn"})
+end
+d02.onClick=function()
+进入子页面("liu",{"https://www.codu.top/category/jiepai/"})
+进入子页面("yz")
+end
+d03.onClick=function()
+进入子页面("liu",{"https://www.codu.top/340.html"})
+进入子页面("yz")
+end
+d04.onClick=function()
+进入子页面("liu",{"https://www.codu.top/category/ruanjian/"})
+进入子页面("yz")
+end
+d05.onClick=function()
+进入子页面("liu",{"https://www.codu.top/299.html"})
+进入子页面("yz")
+end
+
+d06.onClick=function()
+进入子页面("liu",{"https://ys.codu.top/"})
+进入子页面("yz")
+end
+d07.onClick=function()
+进入子页面("liu",{"https://app.kedu.xyz/dsp"})
+进入子页面("yz")
+end
+d08.onClick=function()
+进入子页面("liu",{"http://www.zhenbuka3.com/"})
+进入子页面("yz")
+end
+d09.onClick=function()
+进入子页面("liu",{"https://www.bttwo.com/"})
+进入子页面("yz")
+end
+--热榜
+d10.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/KqndgxeLl9"})
+end
+d11.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/mproPpoq6O"})
+end
+d12.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/WnBe01o371"})
+end
+d13.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/Jb0vmloB1G"})
+end
+d14.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/74KvxwokxM"})
+end
+d15.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/DpQvNABoNE"})
+end
+d16.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/mDOvnyBoEB"})
+end
+d17.onClick=function()
+  进入子页面("liu",{"https://tophub.today/n/9JndkpJe3V"})
+end
+d18.onClick=function()
+  进入子页面("liu",{"https://tophub.today/"})
+end
+--热榜
+
+
+
+
+--工具页
+t11wz.text=tostring("短视频去水印")
+t12wz.text=tostring("颜色工具")
+t13wz.text=tostring("垃圾查询")
+t14wz.text=tostring("计算器")
+t15wz.text=tostring("文字转语言")
+t16wz.text=tostring("🚧")
+t17wz.text=tostring("每日领饿了么外卖红包")
+t21wz.text=tostring("免费音乐")
+t22wz.text=tostring("二维码生成")
+t23wz.text=tostring("一把尺子")
+t24wz.text=tostring("一个木函")
+t25wz.text=tostring("🚧")
+t26wz.text=tostring("🚧")
+t27wz.text=tostring("每日领美团外卖红包")
+
+t11.onClick=function()
+  进入子页面("dsp")
+  进入子页面("yz")
+end
+t12.onClick=function()
+  进入子页面("yan")
+  进入子页面("yz")
+end
+t13.onClick=function()
+  进入子页面("laji")
+  进入子页面("yz")
+end
+t14.onClick=function()
+  进入子页面("jsq")
+  进入子页面("yz")
+end
+t15.onClick=function()
+  进入子页面("wzy")
+  进入子页面("yz")
+end
+t16.onClick=function()
+
+end
+t17.onClick=function()
+  --应用包名
+  local packageName="com.taobao.taobao"
+  --加载地址
+  url=("https://m.tb.cn/h.fcH9g9J")
+  import "android.content.pm.PackageManager"
+  if pcall(function() activity.getPackageManager().getPackageInfo(packageName,0) end) then
+    --判断已安装则调用QQ浏览器载入链接
+    import "android.content.Intent"
+    import "android.net.Uri"
+    viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
+    viewIntent.setPackage(packageName)
+    activity.startActivity(viewIntent)
+   else
+    进入子页面("liu",{url})
+  end
+end
+t21.onClick=function()
+  进入子页面("yy")
+  进入子页面("yz")
+end
+t22.onClick=function()
+  进入子页面("ewm")
+  进入子页面("yz")
+end
+t23.onClick=function()
+  进入子页面("chi")
+  进入子页面("yz")
+end
+t24.onClick=function()
+  进入子页面("liu",{"https://web.woobx.cn/"})
+  进入子页面("yz")
+end
+t25.onClick=function()
+
+end
+t26.onClick=function()
+
+end
+t27.onClick=function()
+  进入子页面("liu",{"https://dpurl.cn/aiQSLGdz"})
+end
+--工具页
+
+
+
+
+--视频页
+j1.onClick=function()
+  进入子页面("jx",{"https://m.v.qq.com/"})
+  进入子页面("yz")
+end
+j2.onClick=function()
+  进入子页面("jx",{"https://m.iqiyi.com/"})
+  进入子页面("yz")
+end
+j3.onClick=function()
+  进入子页面("jx",{"https://www.youku.com/"})
+  进入子页面("yz")
+end
+j4.onClick=function()
+  进入子页面("jx",{"https://m.mgtv.com/"})
+  进入子页面("yz")
+end
+j5.onClick=function()
+  进入子页面("jx",{"https://m.pptv.com/"})
+  进入子页面("yz")
+end
+j6.onClick=function()
+  进入子页面("jx",{"https://m.tv.sohu.com/"})
+  进入子页面("yz")
+end
+j7.onClick=function()
+  进入子页面("jx",{"http://m.le.com/"})
+  进入子页面("yz")
+end
+j8.onClick=function()
+  进入子页面("jx",{"https://vip.1905.com/"})
+  进入子页面("yz")
+end
+
+--平台直播
+斗鱼.onClick=function()
+  进入子页面("liu",{"https://m.douyu.com/"})
+  进入子页面("yz")
+end
+虎牙.onClick=function()
+  进入子页面("liu",{"https://m.huya.com/"})
+  进入子页面("yz")
+end
+战旗.onClick=function()
+  进入子页面("liu",{"https://m.zhanqi.tv/"})
+  进入子页面("yz")
+end
+哔哩.onClick=function()
+  进入子页面("liu",{"https://live.bilibili.com/"})
+  进入子页面("yz")
+end
+企鹅体育.onClick=function()
+  进入子页面("liu",{"https://live.qq.com/"})
+  进入子页面("yz")
+end
+中国体育.onClick=function()
+  进入子页面("liu",{"http://www.zhibo.tv/"})
+  进入子页面("yz")
+end
+直播吧.onClick=function()
+  进入子页面("liu",{"https://m.zhibo8.cc/"})
+  进入子页面("yz")
+end
+天天直播.onClick=function()
+  进入子页面("liu",{"http://www.tiantianzhibo.com/"})
+  进入子页面("yz")
+end
+
+
+--电视直播
+CCTV1.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv1hd/4000000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV2.onClick=function()
+  进入子页面("h",{"http://39.135.34.150:8080/000000001000/1000000001000012442/1.m3u8?xtkg"})
+  进入子页面("yz")
+end
+CCTV3.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv3hd/4000000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV4.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv4/1300000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV5.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv5hd/4000000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV6.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv6hd/4000000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV7.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv7/1300000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV8.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv8hd/4000000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV9.onClick=function()
+  进入子页面("h",{"http://httpdvb.slave.nx96200.cn:13164/playurl?playtype=live&protocol=hls&accesstoken=R5EDED88FU30990082K776ABB09I32F98767PBM323A1A7V0Z9C465W1616B8D311E6D9E9&playtoken=31648YBGNZQKEGQ10&verifycode=2003357934&rate=org&programid=4200900139.m3u8"})
+  进入子页面("yz")
+end
+CCTV10.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv10hd/4000000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV11.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv11/1300000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV12.onClick=function()
+  进入子页面("h",{"http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/cctv12/1300000/mnf.m3u8"})
+  进入子页面("yz")
+end
+CCTV13.onClick=function()
+  进入子页面("h",{"http://cctvalih5ca.v.myalicdn.com/live/cctv13_2/index.m3u8"})
+  进入子页面("yz")
+end
+CCTV14.onClick=function()
+  进入子页面("h",{"http://otttv.bj.chinamobile.com/TVOD/88888888/224/3221226229/1.m3u8"})
+  进入子页面("yz")
+end
+CCTV15.onClick=function()
+  进入子页面("h",{"http://39.135.34.150:8080/000000001000/1000000002000008163/1.m3u8?xtkg"})
+  进入子页面("yz")
+end
+卫视.onClick=function()
+  进入子页面("liu",{"http://m.haoqu99.com/2/"})
+  进入子页面("yz")
+end
+
+
+--关于页
+g1.onClick=function()
+  圆角对话框()
+  .设置标题("你确定要清除数据吗？")
+  .设置消息("若软件无异常，不建议清除数据。")
+  .设置积极按钮("确定",function()
+    os.execute("pm clear "..activity.getPackageName())
+  end)
+  .设置消极按钮("取消")
+  .显示()
+end
+g2.onClick=function()
+  提示("每次启动软件自动检测")
+end
+g3.onClick=function()
+  进入子页面("liu",{"https://www.codu.top/10.html"})
+end
+g4.onClick=function()
+  分享文本("刻度空间APP，免费影视，电视，直播，图片，小说，音乐，去水印，工具，一应俱全。 下载地址:https://app.codu.top")
+end
+g5.onClick=function()
+  import "java.io.File"
+  File("/storage/emulated/0/Android/data/wgq.kedu.xyz/刻度空间/软件声明.txt").delete()--删除原文件
+  退出页面()
+  进入子页面("main")
+end
+g6.onClick=function()
+  --微信扫一扫
+  --判断用户有没有安装微信
+  if pcall(function() activity.getPackageManager().getPackageInfo('com.tencent.mm',0) end) then
+    import 'android.content.Intent'
+    import 'android.content.ComponentName'
+    local intent = Intent();
+    intent.setComponent(ComponentName('com.tencent.mm','com.tencent.mm.ui.LauncherUI'));
+    intent.putExtra('LauncherUI.From.Scaner.Shortcut',true);
+    intent.setFlags(335544320);
+    intent.setAction('android.intent.action.VIEW');
+    activity.startActivity(intent);--直接跳转到扫一扫界面
+
+    系统下载("http://app.codu.top/ht/gzh.png","Download","gzh.png")
+    提示("二维码已保存")
+  end
+end
+g7.onClick=function()
+  加QQ群(603734869)
+end
+
+
+
+
+
+【主页代码】
+
+
+
