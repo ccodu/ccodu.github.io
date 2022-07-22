@@ -1,7 +1,7 @@
-最新版本【2.1.4】
-更新内容【紧急修复部分问题】
-更新网盘【https://kedu.lanzoui.com/b0d7ogi0j】
-更新直链【https://ccodu.github.io/codu2.1.4.apk】
+最新版本【1.0.3】
+更新内容【刻度空间以及极速版将停止维护，已更名为刻度社区，本次更新在原有的基础上增加社区功能以便分享我们的快乐。安装后请手动卸载黄标空间】
+更新网盘【https://kedu.lanzoui.com/igqHnxrbwzi】
+更新直链【http://152.32.211.144:8881/down/f4uTt5DVUrhE】
 更新开关【开】
 
 
@@ -15,11 +15,11 @@
 解析一【https://www.2692222.com/?url=】
 解析二【https://lecurl.cn/?url=】
 解析三【https://api.jhdyw.vip/?url=】
-解析四【http://www.ikukk.com/?url=】
+解析四【】
 
 
-验证首次【关】
-验证三次【关】
+验证首次【开】
+验证三次【开】
 验证密码【8080】
 验证文字【截图或点击二维码保存，扫码关注公众号回复验证码获取】
 
@@ -149,15 +149,15 @@ end
 
 
 
-d01wz.text=tostring("全平台优惠券")
+d01wz.text=tostring("每日领红包")
 d02wz.text=tostring("街拍团")
 d03wz.text=tostring("投稿贴图")
 d04wz.text=tostring("精选APP")
 d05wz.text=tostring("小众导航")
 d06wz.text=tostring("头号影厅")
 d07wz.text=tostring("小姐姐短视频")
-d08wz.text=tostring("真不卡影视")
-d09wz.text=tostring("两个BT")
+d08wz.text=tostring("维护中")
+d09wz.text=tostring("维护中")
 d10wz.text=tostring("微博 热搜榜")
 d11wz.text=tostring("知乎 热榜")
 d12wz.text=tostring("微信 24H热文")
@@ -169,22 +169,23 @@ d17wz.text=tostring("猫眼票房榜")
 d18wz.text=tostring("更多热榜")
 
 d01.onClick=function()
-进入子页面("liu",{"http://xtjpx.yhzu.cn"})
+--进入子页面("liu",{"http://xtjpx.yhzu.cn"})
+进入子页面("liu",{"https://www.codu.top"})
 end
 d02.onClick=function()
-进入子页面("liu",{"https://www.codu.top/category/jiepai/"})
+进入子页面("liu",{"https://www.codu.top"})
 进入子页面("yz")
 end
 d03.onClick=function()
-进入子页面("liu",{"https://www.codu.top/340.html"})
+进入子页面("liu",{"https://www.codu.top"})
 进入子页面("yz")
 end
 d04.onClick=function()
-进入子页面("liu",{"https://www.codu.top/category/ruanjian/"})
+进入子页面("liu",{"https://www.codu.top"})
 进入子页面("yz")
 end
 d05.onClick=function()
-进入子页面("liu",{"https://www.codu.top/299.html"})
+进入子页面("liu",{"https://www.codu.top"})
 进入子页面("yz")
 end
 
@@ -197,12 +198,12 @@ d07.onClick=function()
 进入子页面("yz")
 end
 d08.onClick=function()
-进入子页面("liu",{"http://www.zhenbuka3.com/"})
-进入子页面("yz")
+--进入子页面("liu",{"http://www.zhenbuka3.com/"})
+--进入子页面("yz")
 end
 d09.onClick=function()
-进入子页面("liu",{"https://www.bttwo.com/"})
-进入子页面("yz")
+--进入子页面("liu",{"https://www.bttwo.com/"})
+--进入子页面("yz")
 end
 --热榜
 d10.onClick=function()
@@ -325,19 +326,19 @@ end
 
 --视频页
 j1.onClick=function()
-  进入子页面("jx",{"https://m.v.qq.com/"})
+  进入子页面("jx",{"https://m.film.qq.com/x/vip-home/"})
   进入子页面("yz")
 end
 j2.onClick=function()
-  进入子页面("jx",{"https://m.iqiyi.com/"})
+  进入子页面("jx",{"https://m.iqiyi.com/vip"})
   进入子页面("yz")
 end
 j3.onClick=function()
-  进入子页面("jx",{"https://www.youku.com/"})
+  进入子页面("jx",{"https://www.youku.com/vip"})
   进入子页面("yz")
 end
 j4.onClick=function()
-  进入子页面("jx",{"https://m.mgtv.com/"})
+  进入子页面("jx",{"http://m.mgtv.com/channel/vip/"})
   进入子页面("yz")
 end
 j5.onClick=function()
@@ -505,6 +506,7 @@ end
 g7.onClick=function()
   加QQ群(603734869)
 end
+
 
 
 
